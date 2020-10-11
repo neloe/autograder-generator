@@ -14,6 +14,9 @@ WORKFLOW_YML='''    name: GitHub Classroom Workflow
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
+          - uses: actions/setup-java@v1
+            with:
+              java-version: '11'
           - uses: education/autograding@v1'''
 
 def parse_tests(fname):
